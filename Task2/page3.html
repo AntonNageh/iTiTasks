@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        section{
+            padding: 50px;
+        }
+        label {
+            color: darkred;
+        }
+        fieldset {
+            padding: 10px 25px;
+        }
+        input {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section style="margin: auto; width: 30%;">
+        <form>    
+            <fieldset style="border: 1px blue solid;">
+                <legend style="color: red;">Login</legend>
+                <label for="username">User name :</label>
+                <br/>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+                <br/>
+                <label for="password">User password :</label>
+                <br/>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <div>
+                    <input style="width: auto;" type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <br/>
+                <center>
+                    <button type="submit" style="color: darkred;">Sign in</button>
+                </center>
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let x = parseInt(prompt("Please enter the first number", ""));
+        let y = parseInt(prompt("Please enter the second number", ""));
+        let output1 = "", output2 = "", sum = 0;
+        for(let i = x; i <= y; i++){
+            if(i % 3 == 0 || i % 5 == 0){
+                if(i % 3 == 0){
+                output1 += i + " "
+                let num = i
+                sum+=num
+                }
+                
+                if(i % 3 == 0 && i % 5 == 0){}
+
+                else if(i % 5 == 0){
+                output2 += i + " "
+                let num = i
+                sum+=num
+                }
+            }
+        }
+        document.write("Number multiples of 3 is/are :", output1 + "<br/>")
+        document.write("Number multiples of 5 is/are :", output2 + "<br/>")
+        
+        
+        document.write("Sum = ",  sum)
+
+    </script>
+    
+</body>
+</html>
