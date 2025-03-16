@@ -19,8 +19,8 @@
 
         var n = prompt("Please enter how many values you want to add in numbers", "");
         Validation(n)
-
-        while(inputIsValid)
+        
+        if(!inputIsValid)
         {
             alert("Invalid input, please enter a number (also not 0).")
             var n = prompt("Please enter 'Again' how many values you want to add in numbers", "");
