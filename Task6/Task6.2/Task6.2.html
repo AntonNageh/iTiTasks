@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            margin: auto;
+        }
+        th u {
+            color: black;
+        }
+        
+        table {
+            margin: auto;
+        }
+        td {
+            padding: 10px;
+        }
+        input, select {
+            margin: 10px  0 10px 10px;
+            width: 90%;
+        }
+
+        input[type="checkbox"] {
+            margin: 0px;
+        }
+        
+        label {
+            margin-left: 10px;
+            color: darkred;
+            font-weight: bold;
+        }
+        h2,h4 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <section>     
+        <form action="child.html">
+            <table border="1" borderColor="grey" style="border-style: solid; border-width: 2px; border-collapse: collapse;">
+                <thead><th colspan="3"><h2>Registration Form</h2></th></thead>
+                <tr>
+                    <td><label for="firstname">First Name:</label></td>
+                    <td colspan="2"><input autofocus type="text" id="firstname" name="firstname" placeholder="Enter your first name"></td>
+                </tr>
+                <tr>
+                    <td><label for="lastname"><span style="text-decoration: underline;">L</span>ast  Name:</label></td>
+                    <td colspan="2"><input accesskey="l" type="text" id="lastname" name="lastname" placeholder="Enter your last name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td colspan="2"><input type="email" id="email" name="email" placeholder="Enter your email"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td colspan="2"><input type="password" id="password" name="password" placeholder="Enter your password"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><label for="gender">Gender:</label></td>
+                    <td colspan="2" rowspan="1">
+                        <input style="width: auto;" type="radio" value="male" id="genderMale" name="gender">
+                        <label for="genderMale">Male</label>
+                    </td>
+                    <tr>
+                        <td colspan="2" rowspan="1">
+                            <input style="width: auto;" type="radio" value="female" id="genderFemale" name="gender">
+                            <label for="genderFemale">Female</label>
+                        </td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td><label for="country">Country:</label></td>
+                    <td colspan="2" name="Country">
+                        <select id="country" name="country">
+                            <optgroup label="Africa">
+                                <option value="Egypt">Egypt</option>
+                                <option value="Sudan">Sudan</option>
+                                <option value="Libya">Libya</option>
+                            </optgroup>
+                            <optgroup disabled label="Europe">
+                                <option value="Italy">Italy</option>
+                                <option value="Sweden">Sweden</option>
+                                <option value="Spain">Spain</option>
+                            </optgroup>
+                            <optgroup label="Asia">
+                                <option value="Palestine">Palestine</option>
+                                <option value="South Korea">South Korea</option>
+                                <option value="India">India</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="birthday">Birthday:</label></td>
+                    <td colspan="2" name="birthday">
+                        <input type="date" id="birthday" name="birthday">
+                    </td>
+                </tr>
+                <tr>
+                    <td id="Interests" colspan="3" style="text-align: center;"><h4>Interests</h4></td>
+                </tr>
+                <tr class="interest">
+                        <td>
+                            <label for="sports">
+                                <input style="width: auto;" type="checkbox" name="Interests" id="sports" value="sports">
+                                Sports
+                            </label>
+                        </td>
+                        <td>
+                            <label for="music">
+                                <input style="width: auto;" type="checkbox" name="Interests" id="music" value="music">
+                                Music
+                            </label>
+                        </td>
+                        <td>
+                            <label for="fashion">
+                                <input  style="width: auto;"type="checkbox" name="Interests" id="fashion" value="fashion">
+                                Fashion
+                            </label>
+                        </td>
+                  </tr>
+                <tr class="interest">
+                        <td>
+                            <label for="reading">
+                                <input style="width: auto;" type="checkbox" name="Interests" id="reading" value="reading">
+                                Reading
+                            </label>
+                        </td>
+                        <td>
+                            <label for="shopping">
+                                <input style="width: auto;" type="checkbox" name="Interests" id="shopping" value="shopping">
+                                Shopping
+                            </label>
+                        </td>
+                        <td>
+                            <label for="movies">
+                                <input style="width: auto;"type="checkbox" name="Interests" id="movies" value="movies">
+                                Movies
+                            </label>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" id="bio" name="bio" style="text-align: center;"><h4>Bio</h4></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <textarea id="bio" name="bio" style="width: 98%; height: 100px; resize: none;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <button type="submit">Register</button>
+                    </td>
+                    <td >
+                    </td>
+                    <td style="text-align: left;">
+                        <button type="reset">Clear</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    <script src="demo.js"></script>
+</body>
+</html>
