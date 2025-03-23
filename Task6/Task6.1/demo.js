@@ -11,6 +11,7 @@ function openWindow() {
             textIndex++
         } else {    
             clearInterval(timer)
+            textIndex = 0;
             child.close()
         }
     }, 100)

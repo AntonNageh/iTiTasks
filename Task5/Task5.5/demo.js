@@ -12,6 +12,8 @@ function openWindow() {
         y += dy;
         if (x >= 10000 || y >= 10000) {
             child.close()
+            x = 0;
+            y = 0;
             clearInterval(timer)
         }
     }, 100)

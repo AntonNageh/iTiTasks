@@ -31,19 +31,24 @@ function flipImage(id) {
     } else {
         // second click
         console.log("second click")
-        hasFlippedCard = false;
         image.src = data["pic" + numbers[parseInt(id) - 1]];
         secondCard = image.src;
         secondCardId = id;
-        checkForMatch(firstCard, secondCard);
+        if(secondCardId !== firstCardId){
+            hasFlippedCard = false;
+            checkForMatch(firstCard, firstCardId, secondCard, secondCardId);
+        }
+        else return
     }
 }
-function checkForMatch(firstCard, secondCard) {
-    if (firstCard === secondCard) {
+
+function checkForMatch(firstCard, firstCardId, secondCard, secondCardId) {
+    if (firstCard === secondCard ) {
         // match!
         WinCount++
         if (WinCount === 6) {
-            alert("You win!");
+            document.body.innerHTML = "<img style='margin: 150px 650px; scale: 3.5' src='https://www.animatedimages.org/data/media/492/animated-fireworks-image-0065.gif'></img>"
+            document.body.innerHTML += "<button type='button' style='margin: 10px 750px;' onclick='location.reload()'>Play Again</button>"
         }
     } else {
         // no match
