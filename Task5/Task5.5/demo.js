@@ -16,5 +16,5 @@ function openWindow() {
             y = 0;
             clearInterval(timer)
         }
-    }, 100)
+    }, 1000)
 }

@@ -10,8 +10,8 @@ var h6 = document.getElementById("h6")
 var h7 = document.getElementById("h7")
 var h8 = document.getElementById("h8")
 var h9 = document.getElementById("h9")
-var url = window.location.href;
-
+var url = location.search
+// .search msh a7sn 7aga
     var params = url.split('?')[1].split('&');
     
     for(let i=0; i < params.length; i++){

@@ -1,5 +1,5 @@
 let text = "Hello world ..."
-let textIndex = 0;
+let textIndex = -1;
 
 function openWindow() {    
     let child = window.open("child.html", "", "width=150,height=150"); 
@@ -11,7 +11,7 @@ function openWindow() {
             textIndex++
         } else {    
             clearInterval(timer)
-            textIndex = 0;
+            textIndex = -1;
             child.close()
         }
     }, 100)

@@ -28,12 +28,14 @@ function NextWindow(){
 let timer;
 
 function SlideShow () {
-    timer = setInterval(function() {
-        NextWindow();     
-        if (x === 5) {
-        clearInterval(timer);
-        }
-    }, 1000);
+    if(x!=5){
+        timer = setInterval(function() {
+            NextWindow();     
+            if (x === 5) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
 }
 
 function StopWindow () {

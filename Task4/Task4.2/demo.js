@@ -9,7 +9,8 @@ if (message.length === 0) {
 }
 else {
     
-//  Check if CaseSens is true
+//  Check if CaseSens is true // 2 for loops problem REFACTORING
+
     if(CaseSens){
         for(let i=message.length -1; i>=0; i--){
             reversedMessage+=message[i]
