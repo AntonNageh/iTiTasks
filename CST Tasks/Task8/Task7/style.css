@@ -1,0 +1,30 @@
+#container{
+    width: 60%;
+    height: 70dvh;
+    position: relative;
+    border: 2px solid black;
+}
+
+
+body {
+    margin: 50px 150px;
+}
+#left{
+    position: absolute;
+    top: 40%;
+    left: 0%;
+}
+
+
+#right{
+    position: absolute;
+    right: 0%;
+    top: 40%;
+}
+
+
+#top{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+}

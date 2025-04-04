@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Generate Get Well Soon Card</title>
+</head>
+<body>
+    <table id="table">
+        <thead>
+            <tr>
+                <th colspan="3">Generate Get Well Soon Card</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img width="150px" src="CardMaker/1.jpg" alt="">
+                    <input type="radio" name="card" value="1.jpg" onclick="selectCard(this)">
+                </td>
+                <td>  
+                    <img width="150px" src="CardMaker/2.jpg" alt="">
+                    <input type="radio" name="card" value="2.jpg" onclick="selectCard(this)">
+                </td>
+                <td>
+                    <img width="150px" src="CardMaker/3.jpg" alt="">
+                    <input type="radio" name="card" value="3.jpg" onclick="selectCard(this)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img width="150px" src="CardMaker/4.jpg" alt="">
+                    <input type="radio" name="card" value="4.jpg" onclick="selectCard(this)">
+                </td>
+                <td>
+                    <img width="150px" src="CardMaker/5.jpg" alt="">
+                    <input type="radio" name="card" value="5.jpg"onclick="selectCard(this)" >
+                </td>
+                <td>
+                    <img width="150px" src="CardMaker/7.jpg" alt="">
+                    <input type="radio" name="card" value="7.jpg" onclick="selectCard(this)">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><h2>Personal Message</h2></td>
+            </tr>
+            <tr>
+                <td colspan="3"><textarea id="text"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button id="button" type="submit" onclick="submit()">Generate</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

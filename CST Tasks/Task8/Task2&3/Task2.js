@@ -10,7 +10,7 @@ function adding(){
         throw new Error("Invalid arguments");
     for(let i=0; i < arguments.length; i++){
         if(typeof(arguments[i]) != "number") 
-        throw new Error("Invalid arguments");
+        throw new Error("Please enter a number");
         else {
             sum +=arguments[i]
         }
