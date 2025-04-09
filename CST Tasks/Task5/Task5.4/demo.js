@@ -1,6 +1,6 @@
 let x = 0;
 let y = 0;
-let clear = false;
+
 function openWindow() {    
     let dx = 20;
     let dy = 20;

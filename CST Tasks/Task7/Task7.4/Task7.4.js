@@ -8,25 +8,25 @@ function EnterEqual () {
                 {
                 let newval = ans.value.split("+")
                 result = Number(newval[0]) + Number(newval[1])  
-                break;
+                return;
             }
             case ans.value.includes("-"):
                 {
                     let newval = ans.value.split("-")
                     result = Number(newval[0]) - Number(newval[1])   
-                    break;
+                    return;
                 }
                 case ans.value.includes("*"):
                     {
                         let newval = ans.value.split("*")
                         result = Number(newval[0]) * Number(newval[1])      
-                        break;
+                        return;
                     }
                     case ans.value.includes("/"):
                         {
                             let newval = ans.value.split("/")
                             result = Number(newval[0]) / Number(newval[1])
-                            break;
+                            return;
                         }
                     }
                     ans.value = result

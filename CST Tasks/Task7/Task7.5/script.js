@@ -16,5 +16,5 @@ function Register(){
     setCookie("counter", counter)
 
    // redirecting to Profile page
-    window.location.href = "profilePage.html"
+    location.assign("profilePage.html")
     }

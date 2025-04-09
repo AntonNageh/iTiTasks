@@ -1,0 +1,61 @@
+/* .custom-class{
+    background: purple;
+}
+*/
+button:not(.slideShow){
+    padding: 20px;
+    background-color: #FF69B4;
+    color: white;
+    border: 1px solid #676767;
+    width: 200px;
+    margin:auto;
+    cursor: pointer;
+    font-size: larger;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+} 
+form .send {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    width: 100px;
+}
+
+#content {
+    padding: 20px;
+    background-color: white;
+    color: black;
+    width: 500px;
+    height: 300px;
+    margin-top: 50px;
+
+    font-size: larger;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.slideShowContent{
+    display: flex;
+}
+ #content{
+    display: none;
+}
+#content {
+    margin-left: -100px;
+    margin-top: 100px;
+}
+div .slideShowContent button {
+    width: auto;
+    height: auto;
+    background-color: white;
+    border: none;
+    box-shadow: none;
+}
+li {
+    font-size: large;
+    text-align: left;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #FF69B4;
+}
+li::marker{
+    color: #FF69B4;
+}

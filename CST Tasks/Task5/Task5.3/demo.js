@@ -1,6 +1,6 @@
 let obj = {nm:"ali", age:"5"}
 let request = prompt("Enter the key", "")
-function showAddr (obj, key) {
+function showAddr ( key) {
     if(key === "nm")
     {
         document.write(obj[key] + " is your name.")
@@ -13,4 +13,4 @@ function showAddr (obj, key) {
     }
 }    
 
-showAddr(obj, request)
+showAddr(request)
