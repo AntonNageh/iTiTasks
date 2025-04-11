@@ -31,11 +31,11 @@ function NumericalSequence (start, end, step){
 
 
     function isValidValue(value) {
-        const isWithinRange = (value >= start && value <= end);
+        // const isWithinRange = (value >= start && value <= end);
 
         const isMultipleOfStep = (value - start) % step === 0;
-      
-        return isWithinRange && isMultipleOfStep;
+      //isWithinRange &&
+        return  isMultipleOfStep;
       }
 
     function ensureNoDuplicates(value) {
@@ -49,14 +49,18 @@ function NumericalSequence (start, end, step){
                 throw new Error("Value does not belong to the sequence.");
             }
             ensureNoDuplicates(value);
-            arr.push(value);
+            (value >= end)?
+            arr.push(value):
+            console.log("Value is smaller than the last number in the sequence.")
         },
         prepend(value) {
             if (!isValidValue(value)) {
                 throw new Error("Value does not belong to the sequence.");
             }
             ensureNoDuplicates(value);
-            arr.unshift(value);
+            (value <= start)?
+            arr.unshift(value):
+            console.log("Value is greater than the first number in the sequence.")
         },
         dequeue() {
             if (arr.length === 0) {

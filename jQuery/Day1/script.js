@@ -175,17 +175,17 @@ let images = [
   "assets/8.jpg",
 ]
 var currentImageIndex = 0;
-
+var divContent= $("#content")
 $("#about").click(function(){
-    $("#content")
-    .toggle()
+
+    divContent.toggle(400, "linear")
     .html(`
       <h5>a story about a snowman</h5>
       `);
 })
 $("#gallery").click(function(){
-  var divContent= $("#content")
-  divContent.fadeIn(1000)
+  divContent.toggle(400, "linear")
+  divContent
   .html(`
      <div class="slideShowContent">
         <button id="prev-button"><img src="left.png" style="width: 50px;"></button>
@@ -198,7 +198,6 @@ $("#gallery").click(function(){
 })
 $("#content").on("click","#prev-button",function() {
   currentImageIndex--;
-  $("#next-button").prop("disabled", false)
   if(currentImageIndex < 0)
   {
     currentImageIndex = images.length - 1
@@ -210,25 +209,21 @@ $("#content").on("click","#prev-button",function() {
 
 $("#content").on("click","#next-button",function() {
   currentImageIndex++;
-  $("prev-button").prop("diabled", false)
-  if (currentImageIndex >= images.length - 1) {
+  if (currentImageIndex > images.length - 1) {
     currentImageIndex = 0;
   }
-  if (currentImageIndex == images.length - 1) {
-    $("#next-button").prop("disabled", true)
 
-  }
   $("#slideshow-image").fadeOut(1000, function() {
     $(this).attr("src", images[currentImageIndex]).fadeIn(300);
   });
 });
-1
+
 // $("#services").click(function(){
 //   $("#ServContent")
 //   .slideToggle(1000)
 
 // })
-const listItems = $("#ServContent ul li"); // Select all list items
+const listItems = $("#ServContent ul li"); 
 listItems.hide();
 
 $("#services").click(function () {
@@ -244,8 +239,7 @@ $("#services").click(function () {
   slideNextItem();
 });
 $("#complain").click(function(){
-  $("#content")
-  .toggle()
+  divContent.toggle(400, "linear")
   .html(`
     <div>
       <form class="form">
@@ -271,18 +265,15 @@ $("#complain").click(function(){
 })
 
 $("#content").on("submit", ".form", function (event) {
-  event.preventDefault(); // Prevent form submission
+  event.preventDefault(); 
 
-  // Retrieve form data
   const name = $("#name").val();
   const email = $("#email").val();
   const phone = $("#phone").val();
   const complain = $("#complainarea").val();
 
-  // Store the data in a temporary object for re-editing
   $("#content").data("formData", { name, email, phone, complain });
 
-  // Display the data with an Edit button
   const message = `
       Your name is ${name} <br/><br/>
       Your email is ${email} <br/><br/>
@@ -295,11 +286,9 @@ $("#content").on("submit", ".form", function (event) {
 
 
   $("#content").on("click", ".back", function () {
-    // Retrieve the stored data
     const formData = $("#content").data("formData");
     console.log(formData)
 
-    // Re-render the form with the stored data
     $("#content").html(`
         <form class="form">
             <br/>
