@@ -120,7 +120,7 @@ class MathUtils {
     static PI = 3.14;
 
     static calculateCircumference(radius) {
-        return 2 * MathUtils.PI * radius;
+        return 2 * this.PI * radius;
     }
 }
 const radius = 5;
@@ -144,4 +144,4 @@ console.log(`Circumference of a circle with radius ${radius} is ${circumference}
 }
 const str = "abacbd";
 const uniqueChar = findFirstUniqueChar(str);
-console.log(uniqueChar);
+console.log(uniqueChar); //c

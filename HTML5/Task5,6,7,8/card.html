@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+        #card {
+        width: 300px;
+        margin: 50px auto;
+        height: 600px;
+        border: red solid 2px;
+        border-radius: 10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 45px;
+        position: relative;
+        }
+
+        #top,
+        #bottom {
+        position: absolute;
+        }
+
+        #top {
+        top: 5px;
+        left: 15px;
+        }
+
+        #bottom {
+        bottom: 5px;
+        right: 15px;
+        }
+
+        #heart {
+        position: relative;
+        width: 100px;
+        height: 90px;
+        top: calc(50% - 135px);
+        left: calc((50% - 50px));
+        }
+
+        #heart:before,
+        #heart:after {
+        position: absolute;
+        content: "";
+        left: 50px;
+        top: 0;
+        width: 50px;
+        height: 80px;
+        background: black;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-225deg);
+        transform-origin: 0 100%;
+        }
+
+        #heart:after {
+        left: 0;
+        transform: rotate(225deg);
+        transform-origin: 100% 100%;
+        }
+
+        #triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 50px solid black;
+        position: absolute;
+        top: 140px;
+        left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <span id="top">A</span>
+        <span id="bottom">A</span>
+        <span id="heart"></span#>
+        <span id="triangle-up"></span#>
+    </div>
+</body>
+</html>

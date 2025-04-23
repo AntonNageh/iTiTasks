@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+            width: 100px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            border: #333 solid 2px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 40vw;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            
+        }
+        section:hover {
+            background-color: #e0e0e0;
+            transition: background-color 0.3s ease;
+        }
+        @media screen and (max-width: 768px) {
+            nav ul li {
+                width: 100vw;
+                text-align: center;
+            }
+            container{
+                flex-direction: column;
+                margin-top: 3em;
+                flex-wrap: nowrap;
+            }
+            section {
+                overflow-y: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul style=" display: flex; list-style: none; flex-flow: wrap; justify-content: space-around; gap:20px">
+                <li><a href="Task1.html">Home</a></li>
+                <li><a href="Task2.html">About</a></li>
+                <li><a href="Task3.html">Services</a></li>
+                <li><a href="Task5.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <container style="display: flex; gap: 20px; justify-content: center; align-items: center; height: 100vh;">
+        <section>
+        <span>This is a flex item</span>
+        <footer>
+            Footer
+        </footer>
+        </section>
+        <section>
+            <span>        
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque excepturi magni consequatur provident. Est quas veniam adipisci dolores dolorum nesciunt vitae cumque illum. Voluptatem harum facilis dolore impedit magni!
+            </span>
+        <footer>
+            Footer
+        </footer>
+    </section>
+    </container>
+</body>
+</html>

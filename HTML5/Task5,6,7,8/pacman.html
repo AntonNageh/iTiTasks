@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pacman {
+            width: 0;
+            height: 0;
+            border: 60px solid red;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: eating 0.1s ease infinite alternate;
+        }
+        @keyframes eating {
+            from {
+            border-right-color: transparent;
+            }
+            to {
+            border-right-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="pacman"></div>
+</body>
+</html>

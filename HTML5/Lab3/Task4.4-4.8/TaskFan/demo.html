@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alternating Fan Sweep</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid black;"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let angle = 0;
+        const step = Math.PI / 4; // 45 degrees = 8 rectangles per circle
+        let direction = 1; // 1 = clockwise, -1 = counter-clockwise
+
+        function draw() {
+            // Clear canvas and switch direction when full circle is done
+            if (Math.abs(angle) >= 2 * Math.PI) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                angle = 0;
+                direction *= -1; // Flip direction
+            }
+
+            ctx.save();
+            ctx.translate(200, 200);         // Move origin to center
+            ctx.rotate(angle);               // Rotate
+
+            ctx.fillStyle = "rgba(0, 102, 204, 0.6)";
+            ctx.fillRect(0, -15, 100, 30);   // Draw rectangle
+
+            ctx.restore();
+
+            angle += step * direction;       // Apply direction
+            setTimeout(draw, 200);           // Delay for visible effect
+        }
+
+        draw();
+    </script>
+</body>
+
+</html>
