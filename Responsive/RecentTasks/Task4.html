@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr 3fr 1fr;
+            height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            grid-row: 1;
+            grid-column: 1 / 6;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 8px 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+            width: 100px;
+            text-align: center;
+            border: 1px solid whitesmoke;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        nav ul li:hover {
+            background-color: #555;
+            transition: all 0.3s ease-in-out;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar-right {
+            background-color: #ddd;
+            grid-column: 3/3;
+            grid-row: 2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+        .sidebar-left {
+            background-color: #ddd;
+            grid-column: 1/1; 
+            grid-row: 2; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            grid-column: 2/2;
+            grid-row: 2; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            border: #333 solid 2px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            grid-column: 1 / 6; 
+            grid-row: 3; 
+        }
+        section:hover {
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.02);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        @media screen and (max-width: 768px) {
+            body{
+                grid-template-rows: auto 1fr 1fr 1fr auto;
+                grid-template-columns: 1fr 3fr 1fr;
+            }
+            nav ul li {
+                text-align: center;
+                margin-top: 1em;
+            }
+            nav ul{
+                flex-direction: column;
+                align-items: center;
+            }
+            .header, .footer, .sidebar-left, .sidebar-right, .container {
+                grid-column: 1 / 4;
+            }
+            .header{
+                grid-row: 1;
+            }
+            .sidebar-left {
+                grid-row: 2;
+            }
+            .container {
+                flex-direction: column;
+                margin-top: 0;
+                flex-wrap: nowrap;
+                grid-row: 3;
+            }
+            .sidebar-right {
+                grid-row: 4;
+            }
+            footer{
+                grid-row: 5; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Task3.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sidebar-left">
+        <section>
+            <h1>Welcome to My Website</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+    </div>
+    <div class="container">
+        <section>
+            <h1>About Our Mission</h1>
+            <p>We aim to deliver high-quality content and services to our users, ensuring satisfaction and value.</p>
+        </section>
+    </div>    
+    <div class="sidebar-right">
+        <section>
+            <h1>Welcome to My Document</h1>
+            <p>This is a simple HTML page with a header, navigation, and a footer.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 My Website , All rights reserved.</p>
+    </footer>
+</body>
+</html>
