@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: linear-gradient(rgba(244, 231, 199, 0.8), rgba(230, 213, 184, 0.8)), 
+            url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        img {
+            width: 100%;
+        }
+        .gap-3 > img {
+            width: 60%;
+            border-radius: 50%;
+        }
+        .card > img {
+            width: 50%;
+            border-radius: 50% !important; 
+        }
+        .d-md-flex > img {
+            width: 20%;
+        }
+        .card {
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            align-items: center;
+        }
+        @media all and (max-width: 768px) {
+            iframe {
+                width: 100vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <!-- First Section -->
+        <div class="row">
+            <div class="col-lg-3 col-sm-12 d-flex gap-3 flex-lg-column">
+                <!-- Mobile View -->
+                <div class="d-md-none d-flex flex-column pb-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <img class="rounded-circle pb-5" src="https://bf1af2.a-cdn.akinoncloud.com/products/2024/12/28/97924/d7599a7e-7d5e-4920-9b74-021916653f9b.jpg" alt="milka" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6Ve1EPycD2YreKLuR57q4iga_19x9BR05A&s" alt="milka" /></div>
+                        <div class="col"><img class="rounded-circle" src="https://images.deliveryhero.io/image/product-information-management/67ee8ae218fc84edaf6def34.jpg?size=520" alt="milka" /></div>
+                        <div class="col"><img class="rounded-circle" src="https://m.media-amazon.com/images/I/716Q3ljx+ML._AC_UF894,1000_QL80_.jpg" alt="milka" /></div>
+                    </div>
+                </div>
+                <!-- Tablet View -->
+                <div class="d-none d-md-flex d-lg-none justify-content-center mb-5 gap-3">
+                    <img src="https://bf1af2.a-cdn.akinoncloud.com/products/2024/12/28/97924/d7599a7e-7d5e-4920-9b74-021916653f9b.jpg" alt="milka" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6Ve1EPycD2YreKLuR57q4iga_19x9BR05A&s" alt="milka" />
+                    <img src="https://images.deliveryhero.io/image/product-information-management/67ee8ae218fc84edaf6def34.jpg?size=520" alt="milka" />
+                    <img src="https://m.media-amazon.com/images/I/716Q3ljx+ML._AC_UF894,1000_QL80_.jpg" alt="milka" />
+                </div>
+                <!-- Desktop View -->
+                <div class="d-none d-lg-flex gap-3 row d-md-none">
+                    <img src="https://bf1af2.a-cdn.akinoncloud.com/products/2024/12/28/97924/d7599a7e-7d5e-4920-9b74-021916653f9b.jpg" alt="milka" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6Ve1EPycD2YreKLuR57q4iga_19x9BR05A&s" alt="milka" />
+                    <img src="https://images.deliveryhero.io/image/product-information-management/67ee8ae218fc84edaf6def34.jpg?size=520" alt="milka" />
+                    <img src="https://m.media-amazon.com/images/I/716Q3ljx+ML._AC_UF894,1000_QL80_.jpg" alt="milka" />
+                </div>
+            </div>
+            <div class="col-lg-9 col-12">
+                <div class="row">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, voluptas tempora dolorum assumenda laborum, perspiciatis ullam fuga itaque officiis odio, provident illum impedit repellat distinctio! Aut quasi nobis blanditiis delectus.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, voluptas tempora dolorum assumenda laborum, perspiciatis ullam fuga itaque officiis odio, provident illum impedit repellat distinctio! Aut quasi nobis blanditiis delectus.</p>
+                </div>
+                <div class="row flex-lg-row flex-column gap-5 gap-md-0 justify-content-between py-3 px-3"> 
+                    <div class="col"><img class="img-fluid" src="https://m.media-amazon.com/images/I/716Q3ljx+ML._AC_UF894,1000_QL80_.jpg" alt="milka" /></div>
+                    <div class="col"><img src="https://images.deliveryhero.io/image/product-information-management/67ee8ae218fc84edaf6def34.jpg?size=520" alt="milka" /></div>
+                    <div class="col"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6Ve1EPycD2YreKLuR57q4iga_19x9BR05A&s" alt="milka" /></div>
+                </div>
+                <div class="row py-5 mx-auto">
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6Ve1EPycD2YreKLuR57q4iga_19x9BR05A&s" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6Ve1EPycD2YreKLuR57q4iga_19x9BR05A&s" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6Ve1EPycD2YreKLuR57q4iga_19x9BR05A&s" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <!-- Second Section -->
+        <div class="row my-5">
+            <div class="col-3"></div>
+            <div class="col">
+                <div class="d-flex align-items-center">
+                    <h1 class="text-start me-3 mb-0">Lorem</h1>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ut molestiae, excepturi odio doloremque repellat dolorem rem repellendus adipisci ullam reprehenderit omnis fugit dolores ea dolorum magnam! Ipsum, repudiandae vel?</p>
+                </div>
+                <div class="col my-5 d-flex flex-column flex-md-row">
+                    <div class="col-6 col-md-9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YS5tKSUVpj0?si=96l_aBb1bJZBgC37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="col col-md-3">
+                        <h1 class="text-start me-3 mb-0">Lorem</h1>
+                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ut molestiae, excepturi odio doloremque repellat dolorem rem repellendus adipisci ullam reprehenderit omnis fugit dolores ea dolorum magnam! Ipsum, repudiandae vel?</p>
+                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ut molestiae, excepturi odio doloremque repellat dolorem rem repellendus adipisci ullam reprehenderit omnis fugit dolores ea dolorum magnam! Ipsum, repudiandae vel?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Last Section -->
+        <div class="row col-12 pb-5">   
+            <div class="col-md-3"></div>
+            <div class="col-md-3 text-center">
+                <img src="https://bf1af2.a-cdn.akinoncloud.com/products/2024/12/28/97924/d7599a7e-7d5e-4920-9b74-021916653f9b.jpg" alt="milka" />
+            </div>
+            <div class="col-md-3 text-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6Ve1EPycD2YreKLuR57q4iga_19x9BR05A&s" alt="milka" />
+            </div>
+            <div class="col-md-3 text-center">
+                <img src="https://images.deliveryhero.io/image/product-information-management/67ee8ae218fc84edaf6def34.jpg?size=520" alt="milka" />
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
