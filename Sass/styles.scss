@@ -1,7 +1,39 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+@import "./colors.scss";
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
+// .form {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+// }
+.form {
+    div {
+    display: inline-block;
+    margin: 10px;
+    }
+    background-color: pink;
 }
+@mixin createLayout($noOfCols,$screenName,$breakpoint){
+    @media(min-width: $breakpoint){
+        @if $screenName==" "{
+            @for $i from 1 through $noOfCols{
+                .col-#{$i}{
+                    width:($i/$noOfCols)*100%;
+                }
+
+            }
+        }
+        @else {
+            @for $i from 1 through $noOfCols{
+                .col-#{$screenName}-#{$i}{
+                    width:($i/$noOfCols)*100%;  
+                }
+            }
+        }
+    }
+}
+
+@include createLayout(12, " ", 200px);
+@include createLayout(18, "sm", 540px);
+@include createLayout(12, "md", 720px);
+@include createLayout(12, "lg", 960px);
+@include createLayout(12, "xlg", 1140px);
