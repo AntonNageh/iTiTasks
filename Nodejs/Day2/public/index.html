@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My html page</title>
+</head>
+<body>
+    <style>
+        body{
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: fit-content;
+        min-width: 250px;
+        min-height: 250px;
+        }
+
+        .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+        padding: 2px 10px;
+        }
+    </style>
+</head>
+<body>
+    <section style="margin: 60px auto; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1 style="font-size: 24px; margin-bottom: 20px;">Welcome to my Library : </h1>
+        <section style="margin: 60px auto; display: flex; flex-direction: row; width: 100%;" class="container">
+            <section style="display: flex; flex-wrap: wrap; justify-content: center;">
+                <div class="card-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                    <div class="card" style="display: flex;flex-wrap: wrap;gap: 30px; margin: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);" id="books"></div>
+                </div>
+            </section>
+        </section>
+        <button type="button" style="width: fit-content; margin-top: 20px; padding: 10px 20px; border: none; border-radius: 10px; background-color: #4CAF50; color: #fff; cursor: pointer;" onclick="window.location.href='./create.html'">Create new book</button>
+        <button type="button" style="width: fit-content; margin-top: 20px; padding: 10px 20px; border: none; border-radius: 10px; background-color: blue; color: #fff; cursor: pointer;" onclick="window.location.href='./search.html'">Search by author name</button>
+    </section>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

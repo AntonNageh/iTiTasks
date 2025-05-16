@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+</style>
+<body>
+  <div class="container">
+    <h1>Create a New Book</h1>
+    <form id="book-form">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="coverImg">Cover Image:</label>
+        <input type="text" id="coverImg" name="coverImg">
+      </div>
+      <button type="submit" class="btn btn-primary">Create Book</button>
+    </form>
+  </div>
+  <script src="form.js"></script>
+</body>
+</html>

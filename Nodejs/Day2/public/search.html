@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <style>
+        #author::placeholder{
+            padding: 10px;
+        }
+    </style>
+    <div style="display: flex;">
+        <button onclick="window.location.href='./index.html'" style="outline: none; border: none; background-color: green; border-radius: 500px; padding: 10px 20px; color: white;"><</button>
+        <input type="text" id="author" placeholder="Enter author name"  style="width: 100%; border-radius: 500px; padding: 10px 0;" onchange="SearchAuthor(this.value)"/>
+    </div>
+        <section style="margin: 60px auto; display: flex; flex-direction: column; justify-content: center; align-items: center;">    
+    <h1 style="font-size: 24px; margin-bottom: 20px;">Welcome to my Library : </h1>
+        <section style="margin: 60px auto; display: flex; flex-direction: row; width: 100%;" class="container">
+            <section style="display: flex; flex-wrap: wrap; justify-content: center;">
+                <div class="card-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                    <div class="card" style="display: flex;flex-wrap: wrap;gap: 30px; margin: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);" id="search">
+                    </div>
+                </div>
+            </section>
+        </section>
+        </section>
+    <script src="search.js"></script>
+</body>
+</html>
+
+
