@@ -40,5 +40,19 @@
     "description": "anton",
     "author": "Anton",
     "coverImg": "../public/book.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Science and Yoga",
+    "description": "anta lsta shagara",
+    "author": "Hagar Ali",
+    "coverImg": "../public/book.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Science",
+    "description": "hagar alii",
+    "author": "hagar msh ali",
+    "coverImg": "../public/book2.jpg"
   }
 ]
