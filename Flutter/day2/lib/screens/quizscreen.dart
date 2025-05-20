@@ -1,8 +1,9 @@
 import 'package:day2/screens/differentscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:day2/utils/global.dart';
 class QuizScreen extends StatelessWidget {
-  QuizScreen({this.username});
-  final String ? username;
+  const QuizScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
   const List<String> texts = [
@@ -18,8 +19,11 @@ const List<Color> colorMap = [
         title: Text("Quiz Screen"),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+        Text("Welcome $username!", style: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),),
+        Text("Please select a Quiz : ", style: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),),
+        SizedBox(height: 32,),
           for (int i = 0; i < 3; i++)
               GestureDetector(
                 onTap: () {
@@ -32,8 +36,8 @@ const List<Color> colorMap = [
         child:
           Expanded(
             child: Container(
-              height: 224, // add this line
-              padding: EdgeInsets.all(16),
+            height: MediaQuery.of(context).size.height * 0.259, 
+            padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
               color: colorMap[i],
               ),

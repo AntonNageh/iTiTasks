@@ -1,6 +1,7 @@
 import 'package:day2/screens/quizscreen.dart';
 import 'package:day2/styles/Icons.dart';
 import 'package:flutter/material.dart';
+import 'package:day2/utils/global.dart';
 
 class Loginscreen extends StatelessWidget  {
   const Loginscreen({super.key});
@@ -27,8 +28,8 @@ class Loginscreen extends StatelessWidget  {
             labelText: 'Enter your username',
           ),
           onSubmitted: (text){
-            String username = text;
-                Navigator.push(context, MaterialPageRoute(builder: (context) => QuizScreen(username: username)));
+            username = text;
+                Navigator.push(context, MaterialPageRoute(builder: (context) => QuizScreen()));
           },
         ),
       ),
