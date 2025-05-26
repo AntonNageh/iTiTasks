@@ -1,3 +1,4 @@
+import 'package:day3/widgets/datepicker.dart';
 import 'package:flutter/material.dart';
 import 'package:day3/models/data.dart';
 
@@ -25,11 +26,13 @@ class TaskContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      
      margin: EdgeInsets.only(top: 12),
      decoration: BoxDecoration(
        color: Colors.white,
        borderRadius: BorderRadius.circular(8),
      ),
+     
      
      padding: EdgeInsets.all(22),child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,17 +41,21 @@ class TaskContainer extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+              
             Text(time ,style:selectedIndex == 1 ? TextStyle(decoration: TextDecoration.lineThrough, fontSize: 20) : TextStyle(fontSize: 20),),
-
             SizedBox(width: 12,),
             IconButton(
             icon: 
             selectedIndex == 2 ? Icon(Icons.restore) : Icon(Icons.delete),
             onPressed: selectedIndex == 2 ? onRestore : onDelete
           ),
+            Visibility(
+            visible: selectedIndex == 0,
+            child: 
             IconButton(
-            icon: Icon(Icons.edit),
+            icon: Icon(Icons.edit), 
             onPressed: onUpdate,
+          ),
           ),
           Visibility(
             visible: selectedIndex == 0,
@@ -56,7 +63,7 @@ class TaskContainer extends StatelessWidget {
               onPressed: onComplete ,
               icon: Icon(Icons.done),
             ),
-          )
+          ),
               ],
             )
          ],),

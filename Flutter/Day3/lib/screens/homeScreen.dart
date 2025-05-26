@@ -1,3 +1,4 @@
+import 'package:day3/widgets/datepicker.dart';
 import 'package:day3/widgets/task_container.dart';
 import 'package:flutter/material.dart';
 import 'package:day3/models/data.dart';
@@ -37,14 +38,17 @@ class _HomeScreenState extends State<HomeScreen> {
                           taskName = text;
                         },
                       ),
-                      TextFormField(
-                        decoration: const InputDecoration(
-                          labelText: 'Task time',
-                        ),
-                        onChanged: (value) {
-                          time = value;
-                        },
+
+                      SizedBox(height: 20,),
+                    Column(
+                      children: [
+                      TimePickerWidget (
+                      onTimeSelected: (dateString) {
+                        time = dateString;
+                      },
                       ),
+                      ],
+                    )
                     ],
                   ),
                   actions: [
@@ -177,14 +181,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                       taskName = text;
                                     },
                                   ),
-                                  TextFormField(
-                                    controller: timeController,
-                                    decoration: const InputDecoration(
-                                      labelText: 'New Task time',
-                                    ),
-                                    onChanged: (text) {
-                                      time = text;
-                                    },
+                                  SizedBox(height: 20,),
+                                   Visibility(
+                                    visible: selectedIndex == 0,
+                                    child: 
+                                  TimePickerWidget (
+                                  initialTimeString: dataList[_selectedIndex].data[i].time,
+                                  onTimeSelected: (dateString) {
+                                    // Save dateString to your Task model's time property
+                                    time = dateString;
+                                  },
+                                  ),
                                   ),
                                 ],
                               ),
