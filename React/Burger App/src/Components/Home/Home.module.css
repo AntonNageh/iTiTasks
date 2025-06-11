@@ -1,0 +1,44 @@
+svg .path{
+ fill: transparent;
+ stroke:#fbfada ;
+ stroke-width: 0.2;
+ stroke-dasharray: 50;
+ stroke-dashoffset: 50;
+ animation: txt 2s ease-in-out 1 forwards;
+
+}
+
+@keyframes txt {
+  0%{
+    stroke-dashoffset: 50;
+  }
+  80%{
+    fill: transparent;
+  }
+  100%{
+    fill: #fbfada;
+    stroke-dashoffset: 0;
+  }
+  
+}
+
+.brgr{
+  animation: brgr 1.5s ease-in-out 1s 1 forwards ;
+}
+
+@keyframes brgr {
+
+  from{
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to{
+     opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
+
+
+

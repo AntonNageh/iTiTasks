@@ -1,0 +1,7 @@
+.txt {
+  font-family: "Frijole", system-ui;
+}
+.shadow{
+   /* background-color: rgb(23, 21, 21) !important; */
+  box-shadow: 2px 0px 10px gray;
+}

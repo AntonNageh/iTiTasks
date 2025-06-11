@@ -1,0 +1,17 @@
+[
+  { "name": "Upper Bun", "price": 5, "calories": 120 },
+  { "name": "Bun", "price": 5, "calories": 110 },
+  { "name": "Tomato", "price": 3, "calories": 20 },
+  { "name": "Cucumber", "price": 2, "calories": 15 },
+  { "name": "Lettuce", "price": 2, "calories": 5 },
+  { "name": "Cheese Sticks", "price": 7, "calories": 90 },
+  { "name": "Beef", "price": 15, "calories": 250 },
+  { "name": "Chicken", "price": 12, "calories": 200 },
+  { "name": "Hotdog", "price": 10, "calories": 180 },
+  { "name": "Fish Fillet", "price": 13, "calories": 210 },
+  { "name": "Fried Shrimp", "price": 14, "calories": 230 },
+  { "name": "Shish Taouk", "price": 11, "calories": 190 },
+  { "name": "Kofta", "price": 13, "calories": 220 },
+  { "name": "Turkey", "price": 12, "calories": 160 },
+  { "name": "Onion Rings", "price": 6, "calories": 100 }
+]

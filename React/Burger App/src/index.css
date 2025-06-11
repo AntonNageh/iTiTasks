@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap');
+@import "tailwindcss";
+
+body{
+  background-color: #151515 ;
+}
+
+.bungee {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.knewave {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lexend{
+  font-family: "Lexend Zetta", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -2;
+}
+
+.insetShadow {
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ls-4{
+  letter-spacing: 4px;
+}
+.txt-shadow{
+  text-shadow: 2px 2px 2px darkred;
+}
+
+.ingredients-scroll {
+  padding-right: 8px; 
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(255, 255, 255, 0.696) rgba(255, 255, 255, 0.1); 
+ 
+}
+
+
+.ingredients-scroll::-webkit-scrollbar {
+  width: 5px;
+  
+}
+
+.ingredients-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  
+}
+
+.ingredients-scroll::-webkit-scrollbar-thumb {
+  background-color: #fbbf24; 
+  border-radius: 4px;
+  
+}

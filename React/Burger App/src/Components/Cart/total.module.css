@@ -1,0 +1,39 @@
+.mainTotal {
+    width: 19%;
+    position: fixed;
+    border-radius: 10px;
+    top: 110px;
+    right: 20px;
+    height: 300px;
+    background: linear-gradient(
+      to top,
+      #00000021 0%,          
+      rgba(248, 247, 247, 0.177) 40%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .buttonWrapper {
+    width: 100%;
+    display: flex;
+    height: 60px;
+    flex-direction: column;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .buttonWrapper button {
+    margin-top: 10px;
+    width: 80%;
+    border: none;
+    border-bottom-left-radius: 10px;  
+    border-bottom-right-radius: 10px; 
+    text-align: center;
+    height: 20px;
+    background-color: rgb(0, 58, 0);
+    color: white;
+  }
