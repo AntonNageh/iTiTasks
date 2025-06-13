@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
         <Navbar />
-        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen gap-16 sm:p-20" style={{ fontFamily: "var(--font-geist-sans)" }}>
+        <div className="flex flex-col items-center justify-items-center min-h-screen gap-16 sm:p-20" style={{ fontFamily: "var(--font-geist-sans)" }}>
         {children}
         </div>
       </body>

@@ -6,6 +6,7 @@ export default function page() {
     const params = useParams();
   return (
     <div>
+      404
         More details about product {params.id} with {params.params}
     </div>
   )
