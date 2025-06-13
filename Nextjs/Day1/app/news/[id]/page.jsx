@@ -4,7 +4,9 @@ import Popup from "@/app/components/Popup/Popup";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+
 export default function Page({ params }) {
+  
   const [showModal, setShowModal] = useState(false);
   const [data, setData] = useState(null);
     const handleClose = () => {

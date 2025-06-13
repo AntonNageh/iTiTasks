@@ -1,13 +1,15 @@
-
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const { data: session, status } = useSession();
 
   // Navigation items array
   const navItems = [
@@ -95,11 +97,31 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
+              {/* Auth button for mobile */}
+              {status !== "loading" && (
+                <li className="mt-4">
+                  {session ? (
+                    <button
+                      onClick={() => signOut({ callbackUrl: "/" })}
+                      className="w-full px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+                    >
+                      Sign out
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => signIn()}
+                      className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                    >
+                      Sign in
+                    </button>
+                  )}
+                </li>
+              )}
             </ul>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex lg:items-center">
             <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
               {navItems.map((item, index) => (
                 <li
@@ -112,6 +134,24 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
+            {/* Auth button for desktop */}
+            {status !== "loading" && (
+              session ? (
+                <button
+                  onClick={() => signOut({ callbackUrl: "/" })}
+                  className="ml-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+                >
+                  Sign out
+                </button>
+              ) : (
+                <button
+                  onClick={() => signIn()}
+                  className="ml-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >
+                  Sign in
+                </button>
+              )
+            )}
           </div>
         </div>
       </nav>
