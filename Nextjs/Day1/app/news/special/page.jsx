@@ -1,9 +1,9 @@
 
 import React from 'react';
 
-export default async function SpecialNewsPage() {
-  const response = await fetch(process.env.NEXT_PUBLIC_URL , {cache: 'no-store' });
-  const newsData = await response.json();
+export default  function SpecialNewsPage() {
+  const response =  fetch('data/data.json');
+  const newsData =  response.json();
   return (
     <div>
       <h1>Special News (SSR)</h1>

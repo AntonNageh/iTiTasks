@@ -1,9 +1,9 @@
 import React from 'react'
 export const revalidate = 10;
 export default async function page() {
-  const res = await fetch(process.env.NEXT_PUBLIC_URL );
+  const res = await fetch('data/data.json');
   const news = await res.json();
-  console.log('Regenerating ISR page at', new Date().toLocaleString());
+
   return (
     <div>
       <h1>Featured News (ISR)</h1>
