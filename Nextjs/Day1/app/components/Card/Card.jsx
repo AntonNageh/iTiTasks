@@ -2,7 +2,6 @@ import { signIn, useSession } from 'next-auth/react';
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import React from 'react'
-import Popup from "@/app/components/Popup/Popup";
 
 export default function Card({ data }) {
   const [showSignIn, setShowSignIn] = React.useState(false);
