@@ -10,11 +10,15 @@ const Favorite =lazy(()=>import("./pages/FavoriteMovies"))
 const Series =lazy(()=>import("./pages/Series"))
 const Layout =lazy(()=>import("./pages/Layout"))
 const NotFound =lazy(()=>import("./pages/NotFound"))
+const SignIn =lazy(()=>import("./components/SignIn"))
+const SignUp =lazy(()=>import("./components/SignUp"))
 
 import './App.css'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
 import MovieDetail from './pages/MovieDetail'
+import Form from './pages/Form'
+import Profile from './pages/Profile'
 
 function App() {
 
@@ -22,8 +26,25 @@ const router = createBrowserRouter([
   {
     path:"/",
     element:<Layout />, children : [
+
       {
         index:true,
+        element:<Form />
+      },
+      {
+        path:"signin",
+        element:<SignIn />
+      },
+      {
+        path:"signup",
+        element:<SignUp />
+      },
+      {
+        path:"profile",
+        element:<Profile />
+      },
+      {
+        path:"Home",
         element:<Home />
       },
       {

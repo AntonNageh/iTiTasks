@@ -27,7 +27,7 @@ export default function BasicTabs() {
   const handleChange = (_: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
     if (newValue === 0) {
-      navigate('/');
+      navigate('/home');
     }
     else if(newValue === 1) {
       navigate('/movie');
@@ -37,6 +37,9 @@ export default function BasicTabs() {
     }
     else if(newValue === 3) {
       navigate('/favorites');
+    }
+    else if(newValue === 4) {
+      navigate('/profile');
     }
   };
 
@@ -48,6 +51,7 @@ export default function BasicTabs() {
           <Tab style={{ color: 'white' }} label="Movie" {...a11yProps(1)} />
           <Tab style={{ color: 'white' }} label="Series" {...a11yProps(2)} />
           <Tab style={{ color: 'white' }} label={`Favorites ${count}`} {...a11yProps(3)} />        
+          <Tab style={{ color: 'white' }} label={`Profile`} {...a11yProps(4)} />        
         </Tabs>
       </Box>
     </Box>

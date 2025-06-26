@@ -1,0 +1,114 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: #22223b;
+}
+
+.container {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(60, 72, 88, 0.12);
+  text-align: center;
+  max-width: 350px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  padding: 2.5rem 2rem;
+  max-width: 350px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.card h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2d3a4b;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #4f8cff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.15);
+  transition: background 0.2s;
+}
+
+.card a:hover {
+  background: #2563eb;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 0.5rem 0;
+  color: #3a5a98;
+  letter-spacing: 2px;
+}
+
+p {
+  margin: 0 0 1.5rem 0;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+a {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #3a5a98;
+  color: #fff;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(60, 90, 150, 0.08);
+  margin: 0 1rem;
+}
+
+a:hover {
+  background: #22335c;
+}
+
+.nav-links {
+  margin-bottom: 2rem;
+}
+
+#install {
+  padding: 0.75rem 2rem;
+  background: #10b981;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.08);
+  transition: background 0.2s;
+}
+
+#install:hover {
+  background: #059669;
+}
+
+.icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #3a5a98;
+  opacity: 0.8;
+}
