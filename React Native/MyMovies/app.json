@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "myMovies",
+    "slug": "mymovies",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "platforms": ["ios", "android", "web"],
+    "newArchEnabled": true,
+    "scheme": "mymovies",
+    "splash": {
+      "image": "./assets/landingPage.png",
+      "resizeMode": "contain",
+      "backgroundColor": "black"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mymoviesapp.main"
+    },
+    "android": {
+      "package": "com.mymoviesapp.main",
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "black"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "@react-native-google-signin/google-signin"
+      ],
+      "expo-web-browser"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "32792c2e-28df-4847-ad03-fe467a7f1662"
+      }
+    },
+    "owner": "anton31"
+  }
+}

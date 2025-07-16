@@ -3,10 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Manager PWA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/idb@7/build/umd.js"></script>
 </head>
 <body>
-    <input type="button" value="Display Notification" id="btn">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-tasks"></i>
+                <h1>Task Manager PWA</h1>
+            </div>
+            <div class="notification-status">
+                <i class="fas fa-bell"></i>
+                <span>Notifications: <span id="notification-status">Checking...</span></span>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-database"></i> Database Operations</h2>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="cDB">
+                        <i class="fas fa-plus-circle"></i> Create DB
+                    </button>
+                    <button class="btn btn-primary" id="cPT">
+                        <i class="fas fa-table"></i> Products Table
+                    </button>
+                    <button class="btn btn-primary" id="cOT">
+                        <i class="fas fa-table"></i> Orders Table
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-search"></i> Product Search</h2>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="prodName" placeholder="Enter product name">
+                    <button class="btn btn-secondary" id="search">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                <div id="data" class="empty-state">
+                    <i class="fas fa-box-open"></i>
+                    <h3>No product data</h3>
+                    <p>Search for a product to display information</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-shopping-cart"></i> Orders</h2>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-success" id="displayOrders">
+                        <i class="fas fa-eye"></i> Display Orders
+                    </button>
+                    <button class="btn btn-danger" id="applyOrders">
+                        <i class="fas fa-check-circle"></i> Apply Orders
+                    </button>
+                </div>
+                <div id="ordersData" class="empty-state">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3>No orders available</h3>
+                    <p>Click "Display Orders" to show order information</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-bell"></i> Notifications</h2>
+                </div>
+                <button class="btn btn-warning" id="btn">
+                    <i class="fas fa-bell"></i> Test Notification
+                </button>
+                <p class="notification-info">
+                    <i class="fas fa-info-circle"></i> This will show a sample notification for testing
+                </p>
+            </div>
+        </div>
+
+        <div class="card task-manager">
+            <div class="card-header">
+                <h2><i class="fas fa-tasks"></i> Task Management</h2>
+                <button class="btn btn-primary" id="task-page-btn">
+                    <i class="fas fa-plus"></i> Add New Task
+                </button>
+            </div>
+
+            <div id="task-page" class="task-form-container">
+                <form class="task-form">
+                    <div class="form-group">
+                        <label for="task-title">Task Title</label>
+                        <input type="text" id="task-title" placeholder="Enter task title">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="hours">Hours (hh)</label>
+                            <input type="number" id="hours" min="0" max="23" placeholder="00">
+                        </div>
+                        <div class="form-group">
+                            <label for="mins">Mins (mm)</label>
+                            <input type="number" id="mins" min="0" max="59" placeholder="00">
+                        </div>
+                        <div class="form-group">
+                            <label for="day">Date</label>
+                            <input type="date" id="day">
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-success" id="add-task-btn">
+                        <i class="fas fa-plus"></i> Add Task
+                    </button>
+                </form>
+            </div>
+
+            <div class="tasks-container" id="tasksContainer">
+                <div class="empty-state">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>No tasks yet</h3>
+                    <p>Add your first task to get started</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
